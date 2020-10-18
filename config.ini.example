@@ -1,0 +1,10 @@
+[auth]
+server=NagaMarkets-Demo
+login=1234567
+password=password1
+
+[conn]
+path=C:\Users\user\Desktop\MT5\terminal64.exe
+portable=True
+timeout=5000
+logfile=mt5trader.log
