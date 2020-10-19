@@ -2,6 +2,8 @@ import configparser
 import pymt5adapter as mt5
 import logging
 
+from mt5trader import DaxM5Formula
+
 config = configparser.ConfigParser()
 config.read("config.ini")
 
@@ -40,6 +42,11 @@ def run():
     with mt5_connected as conn:
         logger.info('MT5 Terminal Connected')
         print(mt5.version())
+
+        daxm5 = DaxM5Formula()
+        daxm5.run()
+
+        logger.info('MT5 Terminal Closed')
 
 
 if __name__ == '__main__':
